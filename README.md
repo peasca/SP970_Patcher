@@ -18,3 +18,7 @@ Then copy the 3 files （simselect.html,terminal.html,terminal2.html) to /data/w
 After that，you should flash the userdata with patch to your device.Now，You can enjoy the patch
 
 After patch，you can use ''sim select''with any password and enjoy the Terminal with root permisson
+
+
+
+If you have any question,you can take an issue to report it
