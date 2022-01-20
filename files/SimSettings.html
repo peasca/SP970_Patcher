@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<PEASCA GitHub>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/webkey.common.js"></script>
+<script type="text/javascript" src="js/json2.js"></script>
+<title>`Sim Settings`</title>
+</head>
+<body bgcolor="#3f98ff" width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+	<font color="#FFFFFF" size="+2">
+		<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td align="center" valign="middle">
+					<fieldset style="width:730px; text-align:center;">
+						<legend>`SIM Management`</legend>
+						<table  width="60%" align="center" cellpadding="8" cellspacing="1" class="toptable grid" border="0">
+						    
+						    <!--<tr>
+								<td align="right" valign="top" height="30px" width="30%">
+									<input type="radio" name="simSwitchRadio" id="radioSim1" value="1" />
+								</td>	  
+						        <td align="left" valign="top" height="30px" width="30%">
+						        	<font size="3">
+							        	<label class="widget auto-widget" for="radioSim1">`Sim 1`</label>
+							        	<br>
+						        	</font>
+						        </td>
+							</tr>
+
+							<tr>
+								<td align="right" valign="top" height="30px" width="30%">
+									<input type="radio" name="simSwitchRadio" id="radioSim2" value="2" />
+								</td>	  
+						        <td align="left" valign="top" height="30px" width="30%">
+						        	<font size="3">
+							        	<label class="widget auto-widget" for="radioSim2">`Sim 2`</label>
+							        	<br>
+						        	</font>
+						        </td>
+							</tr> -->
+
+							<tr>
+								<td align="right" valign="bottom" height="30px" width="30%">
+									<select id="selSimType" style="height:30px;width:260px;font-size:18px;">
+										<option value="1">`Enable SIM`</option>
+										<option value="0">`Disable SIM`</option>
+									</select>
+								</td>
+								<td align="left" valign="bottom" height="30px" width="30%">
+									<input id="iptSupperPwd" style="height:24px;width:260px;font-size:18px;" type="password" maxlength="10" placeholder="`Please input supper password.`" "required" />
+								</td>
+							</tr>
+							<tr>
+								<td align="right" valign="bottom" height="30px" width="30%">
+									<input class="Inp_orgbtn2" style="height:30px;width:95px;font-size:18px;" type="button" value="`Apply`" onclick="saveConfig();"/>
+								</td>
+								<td align="left" valign="bottom" height="30px" width="30%">
+									<input class="Inp_orgbtn2" style="height:30px;width:95px;font-size:18px;" type="button" value="`Return`" onclick="location.href='desk.html';"/>
+								</td>
+							</tr>
+						    
+						</table>
+					</fieldset>
+				</td>
+			</tr>
+	  </table>
+	</font>
+</body>
+</html>
+<SP970 CC Lic>
+<script type="text/javascript">
+
+function sendmakeRequest(url,params)
+	{
+		if (window.XMLHttpRequest)
+		{ 	// Mozilla, Safari,...
+	        sendhttp_request = new XMLHttpRequest();
+			if (sendhttp_request.overrideMimeType)
+			{
+		        sendhttp_request.overrideMimeType('text/xml');
+			}
+    }
+    else if (window.ActiveXObject)
+    { 	// IE
+			try
+			{
+  				sendhttp_request = new ActiveXObject("Msxml2.XMLHTTP");
+    	}
+    	catch (e)
+    	{
+        	try
+        	{
+           		sendhttp_request = new ActiveXObject("Microsoft.XMLHTTP");
+        	}
+        	catch (e)
+        	{}
+     	}
+		}
+
+		if (!sendhttp_request)
+		{
+       alert('`Cannot create XMLHTTP instance`');
+       return false;
+		}
+		
+		sendhttp_request.onreadystatechange = alertContentsSend;	//function(){};
+		sendhttp_request.open("POST", url, true);
+		sendhttp_request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		sendhttp_request.setRequestHeader("Content-length", params.length);
+		sendhttp_request.setRequestHeader("Connection", "close");
+		sendhttp_request.send(params);
+  }
+
+	function alertContentsSend() 
+	{
+	   if (sendhttp_request.readyState == 4
+	   		&& sendhttp_request.status == 200)
+	   {
+	   	   alert("`Operate success.`");
+		   setTimeout("location.reload();",1000);
+	   }
+	   
+	   if (sendhttp_request.readyState == 4 && sendhttp_request.status != 200) 
+	   {
+		   alert("`Operate failed.`");
+	   }
+  }
+	
+
+
+$(document).ready(function () {
+	sl4a('getSimPreType',[],function(data){
+		$("#selSimType").val(data.result);
+	});
+
+});
+
+function saveConfig()
+{
+		sendmakeRequest('setSimPreType',$("#selSimType").val());
+
+}
+</script>
+<PEASCA GitHub>
