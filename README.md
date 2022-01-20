@@ -1,6 +1,6 @@
 # SP970_Patcher
 A Project to unlock the local sim&amp;Add the web terminal for SP970 Devices
-Warning!!!:The tool is Only for personal use, not for profit，if anyone profit it，i will take the snapshot to the Project.The Lic of this project is GPLv2！！！
+Warning!!!:The tool is Only for personal use, not for profit，if anyone profit it，i will take the snapshot to the Project.
 ###How to try？###
 To use the tool，you should use it in Windows8.1+ with the last Security Update
 
