@@ -1,4 +1,5 @@
 # SP970_Patcher
+The Lic of the Project is Attribution-NonCommercial-ShareAlike 4.0！！！！
 A Project to unlock the local sim&amp;Add the web terminal for SP970 Devices
 Warning!!!:The tool is Only for personal use, not for profit，if anyone profit it，i will take the snapshot to the Project.
 ###How to try？###
