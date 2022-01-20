@@ -22,3 +22,8 @@ After patch，you can use ''sim select''with any password and enjoy the Terminal
 
 
 If you have any question,you can take an issue to report it
+
+
+
+CN：如果软件修改后无法使用，则可能需要硬件修改，请参照''HardwareChanges''文件夹内的内容
+EN：If the SIM card cannot be switched after software modification, hardware modification may be required. Please refer to the contents in the "hardwarechanges" folder
