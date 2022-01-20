@@ -5,10 +5,7 @@ Warning!!!:The tool is Only for personal use, not for profit，if anyone profit 
 To use the tool，you should use it in Windows8.1+ with the last Security Update
 
 First,you should open the web terminal(192.168.42.129/terminal.html)with Password:admin
-do that:
-1:stop adbd
-2:setprop service.adb.tcp.port 5555
-3:start adbd
+and do that:1:stop adbd；2:setprop service.adb.tcp.port 5555；3:start adbd
 
 And now，you can open the tool，and select 1 to connect to the device
 when the tool export：Connect to 192.168.42.129，you can select 7 to patch your device automatically
