@@ -35,3 +35,7 @@ If you have any question,you can take an issue to report it
 CN：如果软件修改后无法使用，则可能需要硬件修改，请参照''HardwareChanges''文件夹内的内容
 
 EN：If the SIM card cannot be switched after software modification, hardware modification may be required. Please refer to the contents in the "hardwarechanges" folder
+
+# 版权说明
+
+本项目不允许商用！！！另外请部分不会使用GitHub的早日爬
