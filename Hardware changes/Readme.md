@@ -5,8 +5,7 @@ English：If "no SIM" is prompted when switching SIM after software modification
 
 原理解析：六角管其实是个开关，可以靠系统内特定的GPIO切换给哪张SIM VCC，自然，短接就是强制把VCC带到Local SIM上，硬件改动后，是无需切卡的（因为没用，已经被强行拉到LocalSIM上了）
 
-
-Tips：对于SP970_V9以上的版本，请参照Changes_New进行操作
+请不要参照图片进行操作，图片是垃圾办法，在Soc区域动刀有翻车风险，请参照备注1操作
 
 备注#1：（20220121）目前有新版飞线方法，得益于之前的研究，我们可以直接将ESIM的VCC拉到SIM卡槽端，这样干是无需在SOC附近短接的，且只需要拉一条线，更稳定，更安全，更方便
 
